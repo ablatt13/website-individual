@@ -41,10 +41,20 @@ body {
   .nav-list {
     width: 50%; 
   }
-  .pfp, .small-img1 {
-    width: 300px; 
+  .pfp {
+    min-width: 300px; 
   }
 
+  .me-photos1 {
+    justify-content: center !important;
+  }
+
+}
+
+@media screen and (max-width: 594px) {
+  .small-img1 {
+    min-width: 300px !important; 
+  }
 }
 
 /*
@@ -69,6 +79,8 @@ body {
     margin: 0 auto;
     padding: 20px;
   }
+
+
 }
 
 /* Styles for desktops */
@@ -327,7 +339,7 @@ section {
 .me-photos1 {
   width: 100%; 
   gap: 2px; 
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
   display: flex;
   flex-wrap: wrap; 
@@ -337,6 +349,7 @@ section {
   position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 30%;
   min-width: 150px;
 }
