@@ -119,7 +119,7 @@ body {
 nav,
 footer {
   width: 100%;
-  background-color: var(--dark-green);
+  background-color: var(--dark-comp);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
