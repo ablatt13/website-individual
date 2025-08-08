@@ -34,15 +34,28 @@ body {
   .empty-block {
     display: none;
   }
-  .container2 {
+  /*.container2 {
     min-height: 350px; 
-  }
+  }*/
 
   .nav-list {
     width: 50%; 
   }
+  .pfp, .small-img1 {
+    width: 300px; 
+  }
+
 }
 
+/*
+@media screen and (max-width: 1100px) {
+  .me-photos, .bottomimg, .container2 {
+    display: none;
+    height: 1px; 
+    width: 1px; 
+  }
+}
+*/
 
 
 /* Styles for larger screens (tablets) */
@@ -230,39 +243,64 @@ section {
 .pfp {
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  width: 300px; 
+  width: 350px; 
   border-radius: 20px;
+  align-self: flex-start;
+  margin-top: 10px;
 }
 
 #bio {
-  margin: 10px;
-  width: 55%;
+  /* width: 55%; */
   min-width: 300px;
 }
 
 .me-photos {
-  height: auto;
-  width: 100%;
+  width: 100%; 
+  min-width: 200px;
   border: 2px solid purple;
   gap: 2px; 
-  justify-content: space-evenly;
+  justify-content: space-between;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
+  flex-wrap: wrap; 
+  flex-basis: 0;
 }
 
-.bottomimg {
+.small-img {
   aspect-ratio: 4 / 3;
-  height: 150px; 
+  /*height: 150px; */
+ 
+  width: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid red;
+  
 }
 
 .container2 {
   position: relative;
-  height: 100%;
+  aspect-ratio: 4 / 3;
+  /*height: 150px; 
+  max-height: 150px;*/
+  display: flex;
+  flex-direction: row;
+  width: 30%; 
+  min-width: 300px; 
+
+  border: 2px solid green; 
+  
   /*width: 70%;
+  height: auto;
+  aspect-ratio: 4 / 3;
   max-width: 300px;*/
+}
+
+.rectangle {
+ 
+  margin: 10px;
+  width: 55%;
+  min-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
@@ -279,8 +317,55 @@ section {
   font-size: 1em;
   padding: 5px;
   text-align: center;
+  border-radius: 0 0 5px 5px;
 }
 
 .container2:hover .overlay {
+  opacity: 1;
+}
+
+.me-photos1 {
+  width: 100%; 
+  gap: 2px; 
+  justify-content: center;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.container22 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  min-width: 150px;
+}
+
+.small-img1 {
+  aspect-ratio: 4 / 3;
+  min-width: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+.overlay1 {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  /*transition: .5s ease;*/
+  opacity:0;
+  color: white;
+  font-size: 1em;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+}
+
+.container22:hover .overlay1 {
   opacity: 1;
 }
